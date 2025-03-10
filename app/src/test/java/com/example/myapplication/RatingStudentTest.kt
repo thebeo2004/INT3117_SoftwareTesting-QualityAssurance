@@ -74,5 +74,18 @@ class RatingStudentTest {
         assertEquals("D", Rate(25, 3.9, 65))
         assertEquals("C", Rate(25, 3.9, 75))
         assertEquals("B", Rate(25, 3.9, 85))
+
+        //Whitebox Testing with given C2 coverage
+        assertEquals("Invalid", Rate(-1, 4.0, 100))
+        assertEquals("Invalid", Rate(15, 4.1, 100))
+        assertEquals("Invalid", Rate(15, 3.8, 101))
+        assertEquals("-", Rate(0, 3.8, 90))
+        assertEquals("S", Rate(15, 3.9, 90))
+        assertEquals("A", Rate(14, 3.6, 90))
+        assertEquals("B", Rate(14, 3.6, 80))
+        assertEquals("C", Rate(14, 3.6, 70))
+        assertEquals("D", Rate(14, 3.6, 60))
+        assertEquals("F", Rate(14, 3.6, 50))
+
     }
 }
